@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  padding: 0 16px;
+  font-weight: bold;
+}
+
+.title {
+  display: inline-block;
+}
+
+.right {
+  margin-left: auto;
+  margin-right: 0;
+  display: inline-block;
+}

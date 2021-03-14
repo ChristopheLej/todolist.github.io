@@ -1,0 +1,6 @@
+<h1 class="center">My current Todos</h1>
+<app-todo-list
+  [todos]="todos$ | async"
+  (updateTodo)="updateTodo($event)"
+  (removeTodo)="removeTodo($event)"
+></app-todo-list>

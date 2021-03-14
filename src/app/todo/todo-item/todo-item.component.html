@@ -1,0 +1,14 @@
+<div class="item">
+  <button mat-list-item role="listitem" [routerLink]="['/todos', todo.id]">
+    <div [ngClass]="{ completed: todo.completed }">
+      {{ todo.title }}
+    </div>
+  </button>
+
+  <span class="right">
+    <mat-checkbox [checked]="todo.completed" (change)="toggleSatus($event.checked)"></mat-checkbox>
+    <button mat-icon-button aria-label="Delete task" (click)="removeTask()">
+      <mat-icon color="accent">delete</mat-icon>
+    </button>
+  </span>
+</div>

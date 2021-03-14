@@ -1,0 +1,17 @@
+.item {
+  height: 50px;
+}
+
+.right {
+  position: relative;
+  right: -400px;
+  top: -45px;
+
+  button {
+    margin-left: 40px;
+  }
+}
+
+.completed {
+  text-decoration: line-through;
+}

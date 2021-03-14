@@ -1,0 +1,25 @@
+<mat-action-list role="list">
+  <app-todo-header> </app-todo-header>
+
+  <ng-container *ngIf="currentFilter === 'All' || currentFilter === 'Active'">
+    <app-todo-item
+      *ngFor="let todo of todos.filter(filterAvailable)"
+      [todo]="todo"
+      (updateTodo)="updateTodo.emit($event)"
+      (removeTodo)="removeTodo.emit($event)"
+    >
+    </app-todo-item>
+  </ng-container>
+
+  <ng-container *ngIf="currentFilter === 'All' || currentFilter === 'Completed'">
+    <app-todo-item
+      *ngFor="let todo of todos.filter(filterCompleted)"
+      [todo]="todo"
+      (updateTodo)="updateTodo.emit($event)"
+      (removeTodo)="removeTodo.emit($event)"
+    >
+    </app-todo-item>
+  </ng-container>
+
+  <app-todo-footer (updateFilter)="updateFilter($event)"></app-todo-footer>
+</mat-action-list>
