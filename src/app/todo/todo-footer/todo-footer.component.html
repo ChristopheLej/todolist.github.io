@@ -1,0 +1,17 @@
+<footer class="footer">
+  <mat-button-toggle-group
+    name="filter"
+    aria-label="Filter"
+    (change)="updateFilter.emit($event.value)"
+  >
+    <mat-button-toggle
+      *ngFor="let filter of filters"
+      [value]="filter.caption"
+      [checked]="filter.selected"
+    >
+      {{ filter.caption }}
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <button mat-button class="mat-raised-button mat-primary" (click)="newTodo()">Add todo</button>
+</footer>

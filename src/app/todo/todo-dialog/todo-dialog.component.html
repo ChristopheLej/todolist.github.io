@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>New todo</h2>
+
+<form [formGroup]="form">
+  <mat-dialog-content>
+    <mat-form-field>
+      <input matInput placeholder="Title" formControlName="title" required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea matInput placeholder="Description" formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-slide-toggle formControlName="completed">Completed On</mat-slide-toggle>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-raised-button (click)="cancel()">Cancel</button>
+    <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="save()">
+      Save
+    </button>
+  </mat-dialog-actions>
+</form>

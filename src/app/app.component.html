@@ -1,0 +1,6 @@
+<div [ngClass]="(activeTheme$ | async)!.class">
+  <app-layout [themes]="appThemes" (themeSelected)="themeSelected($event)"></app-layout>
+  <section class="container">
+    <router-outlet></router-outlet>
+  </section>
+</div>
