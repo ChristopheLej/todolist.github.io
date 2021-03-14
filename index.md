@@ -1,37 +1,72 @@
-## Welcome to GitHub Pages
+# Context
 
-You can use the [editor on GitHub](https://github.com/ChristopheLej/todolist.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Our fantastic product owner has a wonderful, amazing and revolutionary idea... he wants to build a new Todo application.
+He has a good idea of the application behavior and comes with a backlog containing the following user stories :
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# User stories
 
-### Markdown
+## 1 : List my TODOs
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Description :
 
-```markdown
-Syntax highlighted code block
+As a user I would like to list my current todos
 
-# Header 1
-## Header 2
-### Header 3
+### Acceptance criterias :
 
-- Bulleted
-- List
+- Each todo could have, at minimal, a related state and title
+- Some hard-coded todos will be initialized in this context to demonstrate the tool
 
-1. Numbered
-2. List
+## 2 : Change a TODO state
 
-**Bold** and _Italic_ and `Code` text
+### Description :
 
-[Link](url) and ![Image](src)
-```
+As a user I would like to change a todo state by checking a "box"
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Acceptance criterias :
 
-### Jekyll Themes
+- When a todo is done, it should be placed at the bottom of the list and should be crossed out
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ChristopheLej/todolist.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## 3 : Detail a TODO
 
-### Support or Contact
+### Description :
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+As a user I would like to display one of my todo in a separate or dedicated view.
+This todo will contain its title and a description (which is a new information not shown in the previous view).
+
+### Acceptance criterias :
+
+- We can click on a todo (by any way) to access the details view of the todo
+- The todo could be accessed via a unique URL
+
+## 4 : Add a new TODO
+
+### Description :
+
+As a user I would like to add a new todo in my list
+
+### Acceptance criterias :
+
+- The todo title is required
+- The todo description can be empty
+- The newly created todo has to be on top of the list of todos
+- You are free to choose the design / interaction
+
+# Technical environment
+
+You're working in the WebFactory which provides the following technical recommendations :
+
+- The backend application should be based on NodeJS and on Angular for the frontend
+- To keep the UI simple, the use of Material components is highly recommended (material.angular.io)
+- Code quality is very important, so all the code has to be covered by unit tests
+- Each user story should be realized in its own commit on master
+- The product owner is curious and likes to read the application code on Github and test it via Github Pages
+- The application should have a mocked backend and store all todos on it (extension of HttpXhrBackend)
+
+# Bonus
+
+You can add any new functionality in this wonderful project if you want to, in order to satisfy your PO 😉
+
+# Starting solution
+
+- Server : `yarn server`
+- Front : `yarn start`
